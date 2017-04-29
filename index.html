@@ -6,24 +6,30 @@
 		<link rel="stylesheet" href="styles/styles.css">
 	</head>
 	<body>
-		
-        <div id="stats" class="stats">
-            <span>всего: 0</span>
+        <div id="app"></div>
+
+
+        <script type="text/template" id="main-tpl">
+			<div id="stats" class="stats"></div>
+            <div id="controls" class="controls"><button id="add-block" class="add-block">+</button></div>
+            <ul id="list" class="list"></ul>
+		</script>
+
+        <script type="text/template" id="stats-tpl">
+			<span>всего: 0</span>
             <span>выбранных: 0</span>
             <span>из них: красных - 0, зелёных - 0</span>
-        </div>
+		</script>
 
-        <div id="controls" class="controls"><button id="add-block" class="add-block">+</button></div>
+        <script type="text/template" id="block-tpl">
+			<li class="block">intirnt irstnritn <span class="remove-block"></span></li>
+		</script>
 
-        <ul id="list" class="list">
-            <li class="block">intirnt irstnritn <span class="remove-block"></span></li>
-            <li class="block active type-one">intirnt irstnritn <span class="remove-block"></span></li>
-            <li class="block active type-two">intirnt irstnritn <span class="remove-block"></span></li>
-        </ul>
 
         <script src="node_modules/jquery/dist/jquery.min.js"></script>
         <script src="node_modules/underscore/underscore-min.js"></script>
 		<script src="node_modules/backbone/backbone-min.js"></script>
+        <script src="scripts/views/app-view.js"></script>
 		<script src="scripts/app.js"></script>
 	</body>
 </html>
