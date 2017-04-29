@@ -13,11 +13,12 @@ var app = app || {};
 		events: {
 			'click'              : 'activate',
 			'dblclick'           : 'changeColor',
-			'click .remove-block': 'remove'
+			'click .remove-block': 'delete'
 		},
 
 		initialize: function() {
 			this.listenTo(this.model, 'change', this.render);
+            this.listenTo(this.model, 'destroy', this.remove);
 		},
 
 		render: function() {
@@ -35,7 +36,8 @@ var app = app || {};
 			this.model.toggle();
 		},
 
-		remove: function() {
+		delete: function(e) {
+            e.stopPropagation();
             var removeAction = true;
             var isSpecial    = this.model.get('isSpecial');
 
