@@ -18,13 +18,15 @@ var app = app || {};
             });
 		},
 		activedTypeOne: function() {
-			return this.actived().where({
-                color: TYPE_ONE
+			return this.where({
+				active: true,
+                color : TYPE_ONE
             });
 		},
         activedTypeTwo: function() {
-			return this.actived().where({
-                color: TYPE_TWO
+			return this.where({
+				active: true,
+                color : TYPE_TWO
             });
 		},
 
