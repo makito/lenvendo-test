@@ -1,4 +1,79 @@
 body {
     padding: 0;
     margin: 0;
+    font-size: 15px;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.stats {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #bbb;
+    text-align: center;
+    padding: 10px;
+}
+
+.stats span {
+    margin-right: 10px;
+}
+
+
+
+.controls {
+    text-align: center;
+    padding-top: 60px;
+}
+
+.controls .add-block {
+    font-size: 2em;
+    min-width: 60px;
+    border: 1px solid #666;
+}
+
+
+
+.list {
+    max-width: 60%;
+    list-style: none;
+    text-align: center;
+    padding: 40px 0 0;
+    margin: 0 auto;
+}
+
+.list .block {
+    border: 3px solid #999;
+    padding: 30px 40px;
+    margin-bottom: 20px;
+    text-align: left;
+    position: relative;
+}
+
+.list .block.active {
+    border-color: cornflowerblue;
+}
+
+.list .block.type-one {
+    background-color: #c1ef94;
+}
+
+.list .block.type-two {
+    background-color: #ef6c84;
+}
+
+.list .block .remove-block {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: 2em;
+    line-height: .6;
+    cursor: pointer;
+}
+
+.list .block .remove-block:after {
+    content: "\00d7";
 }
