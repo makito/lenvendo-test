@@ -10,7 +10,9 @@ var app = app || {};
 		},
 
 		toggle: function() {
-			this.set('active', !this.get('active'));
+            this.save({
+                active: !this.get('active')
+            });
 		}
 	});
 })();

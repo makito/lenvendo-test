@@ -13,7 +13,9 @@ var app = app || {};
             var newColor = this.get('color') === TYPE_ONE ?
                            TYPE_TWO :
                            TYPE_ONE;
-			this.set('color', newColor);
+            this.save({
+                color: newColor
+            });
 		}
 	});
 })();

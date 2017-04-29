@@ -6,6 +6,8 @@ var app = app || {};
 	var BlocksList = Backbone.Collection.extend({
 		model: app.Block,
 
+		localStorage: new Backbone.LocalStorage('blocks'),
+
 		actived: function() {
 			return this.where({
                 active: true
