@@ -16,9 +16,9 @@
 		</script>
 
         <script type="text/template" id="stats-tpl">
-			<span>всего: 0</span>
-            <span>выбранных: 0</span>
-            <span>из них: красных - 0, зелёных - 0</span>
+			<span>всего: <%- all %></span>
+            <span>выбранных: <%- actived %></span>
+            <span>из них: красных - <%- typeTwo %>, зелёных - <%- typeOne %></span>
 		</script>
 
         <script type="text/template" id="block-tpl">
@@ -36,6 +36,7 @@
 
         <script src="scripts/collections/blocks-list.js"></script>
 
+        <script src="scripts/views/block-view.js"></script>
         <script src="scripts/views/app-view.js"></script>
 
 		<script src="scripts/app.js"></script>
