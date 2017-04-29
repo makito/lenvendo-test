@@ -4,7 +4,11 @@ var app = app || {};
 	'use strict';
 
 	var BlocksList = Backbone.Collection.extend({
-		model: app.Block,
+		model: function(attrs, options) {
+			return attrs.isSpecial ?
+			       new app.BlockSpecial(attrs, options) :
+				   new app.Block(attrs, options);
+		},
 
 		localStorage: new Backbone.LocalStorage('blocks'),
 
