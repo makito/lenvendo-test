@@ -5,8 +5,8 @@ var app = app || {};
 
 	app.BlockSpecial = app.Block.extend({
 		defaults: {
-			cssClass: 'special',
-            color   : ''
+            isSpecial: true,
+            color    : ''
 		},
 
 		changeColor: function() {
