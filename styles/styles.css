@@ -51,6 +51,11 @@ body {
     margin-bottom: 20px;
     text-align: left;
     position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
 }
 
 .list .block.active {
@@ -72,6 +77,10 @@ body {
     font-size: 2em;
     line-height: .6;
     cursor: pointer;
+}
+
+.list .block .remove-block:hover {
+    color: #ff2e2e;
 }
 
 .list .block .remove-block:after {
