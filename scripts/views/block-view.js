@@ -27,6 +27,7 @@ var app = app || {};
 
             var isSpecial = this.model.get('isSpecial');
             if (isSpecial) {
+                this.$el.removeClass(TYPE_TWO, TYPE_ONE);
                 this.$el.addClass( this.model.get('color') );
             }
 			return this;
